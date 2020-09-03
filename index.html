@@ -64,6 +64,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-基于hexo框架的个人博客搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/03/%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time datetime="2020-09-03T10:44:17.000Z" itemprop="datePublished">2020-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/03/%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">基于hexo框架的个人博客搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h4><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node.js 下载与安装</span><br><span class="line">note.js 包括note.js 和 npm包管理器组件</span><br></pre></td></tr></table></figure>
+<h4 id="heox-博客框架下载"><a href="#heox-博客框架下载" class="headerlink" title="heox 博客框架下载"></a>heox 博客框架下载</h4><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm--registry-http:// registry.npm.taobao.com.org&lt;!--使用淘宝镜像源--&gt;</span><br><span class="line">cnpm install -g hexo-cli&lt;!--安装hexo博客框架--&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="hexo博客框架搭建"><a href="#hexo博客框架搭建" class="headerlink" title="hexo博客框架搭建"></a>hexo博客框架搭建</h4><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> blog&lt;!--简历空文件夹--&gt;</span><br><span class="line">hexo init</span><br><span class="line">hexo s</span><br><span class="line">hexo n 博客名称&lt;!--生成一篇博文--&gt;</span><br><span class="line">hexo clean</span><br><span class="line">hexo g&lt;!--生成博客--&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="hexo-博客远端部署配置"><a href="#hexo-博客远端部署配置" class="headerlink" title="hexo 博客远端部署配置"></a>hexo 博客远端部署配置</h4><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">登录github建立新的仓库</span><br><span class="line">仓库命名：zhonghaiLu.github.io&lt;!--命名务必只能用自己的账户名--&gt;</span><br><span class="line">cnpm install --save hexo-deployer-git&lt;!--安装git的部署插件--&gt;</span><br><span class="line">_config.yml配置：</span><br><span class="line"><span class="function">type: <span class="title">git</span></span></span><br><span class="line"><span class="function"><span class="title">repo</span>: <span class="title">http</span>://<span class="title">github.com</span>/<span class="title">zhonghaiLu</span>/<span class="title">zhonghaiLu.github.io.git</span></span></span><br><span class="line"><span class="function"><span class="title">branch</span>: <span class="title">master</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="hexo部署到远端"><a href="#hexo部署到远端" class="headerlink" title="hexo部署到远端"></a>hexo部署到远端</h4><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h4 id="hexo主题更换"><a href="#hexo主题更换" class="headerlink" title="hexo主题更换"></a>hexo主题更换</h4><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com//litten/hexo-theme-yalia.git themes/yilia</span><br><span class="line">config.yml配置：</span><br><span class="line"><span class="function">theme:<span class="title">yilia</span></span></span><br><span class="line"><span class="function"><span class="title">hexo</span> <span class="title">clean</span></span></span><br><span class="line"><span class="function"><span class="title">hexo</span> <span class="title">g</span></span></span><br><span class="line"><span class="function"><span class="title">heox</span> <span class="title">s</span></span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/09/03/%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" data-id="ckemq22cj0000jcqwd0i1hqgu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-个人简历" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/03/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" class="article-date">
@@ -244,6 +285,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/09/03/%E5%9F%BA%E4%BA%8Ehexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">基于hexo框架的个人博客搭建</a>
+          </li>
         
           <li>
             <a href="/2020/09/03/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">个人简历</a>
